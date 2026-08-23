@@ -77,7 +77,7 @@ export default function AdminDashboard() {
         />
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
         <StatCard
           icon={<FiDollarSign />}
           label="Total Revenue"
@@ -95,6 +95,12 @@ export default function AdminDashboard() {
           label="Total Paid Out"
           value={`₦${Number(stats.totalPaidOut).toLocaleString()}`}
           color="bg-indigo-50 text-indigo-600 dark:bg-indigo-900/30 dark:text-indigo-400"
+        />
+        <StatCard
+          icon={<FiDollarSign />}
+          label="In Flight"
+          value={`₦${Number(stats.inFlightPayoutAmount || 0).toLocaleString()}`}
+          color="bg-cyan-50 text-cyan-600 dark:bg-cyan-900/30 dark:text-cyan-400"
         />
       </div>
 
