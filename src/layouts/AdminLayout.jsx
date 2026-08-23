@@ -5,6 +5,7 @@ import {
   FiUsers,
   FiUserCheck,
   FiDollarSign,
+  FiSettings,
   FiArrowLeft,
 } from "react-icons/fi";
 import { useAuth } from "../context/AuthContext";
@@ -15,6 +16,7 @@ const NAV = [
   { to: "/admin/organizers", icon: <FiUsers />, label: "Organizers" },
   { to: "/admin/attendees", icon: <FiUserCheck />, label: "Attendees" },
   { to: "/admin/payouts", icon: <FiDollarSign />, label: "Payouts" },
+  { to: "/admin/settings", icon: <FiSettings />, label: "Settings" },
 ];
 
 export default function AdminLayout() {
