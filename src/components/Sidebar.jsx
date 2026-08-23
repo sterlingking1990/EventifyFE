@@ -7,6 +7,7 @@ import {
   FiPlusCircle,
   FiUser,
   FiCamera,
+  FiDollarSign,
 } from "react-icons/fi";
 
 export default function Sidebar() {
@@ -51,6 +52,9 @@ export default function Sidebar() {
             </NavLink>
             <NavLink to="/dashboard/scan" className={linkClass}>
               <FiCamera className="text-lg" /> QR Check-In
+            </NavLink>
+            <NavLink to="/dashboard/payouts" className={linkClass}>
+              <FiDollarSign className="text-lg" /> Cashout
             </NavLink>
           </>
         )}
