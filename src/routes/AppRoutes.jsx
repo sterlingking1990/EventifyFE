@@ -25,12 +25,14 @@ import ContactPage from "../pages/ContactPage";
 import PaymentSuccessPage from "../pages/PaymentSuccessPage";
 import ScannerLoginPage from "../pages/ScannerLoginPage";
 import ForgotPasswordPage from "../pages/ForgotPasswordPage";
+import PayoutsPage from "../pages/PayoutsPage";
 
 import AdminDashboard from "../pages/admin/AdminDashboard";
 import AdminEvents from "../pages/admin/AdminEvents";
 import AdminOrganizers from "../pages/admin/AdminOrganizers";
 import AdminAttendees from "../pages/admin/AdminAttendees";
 import AdminPayouts from "../pages/admin/AdminPayouts";
+import AdminSettings from "../pages/admin/AdminSettings";
 
 function ProtectedRoute({ children, allowedRole }) {
   const { user, loading } = useAuth();
@@ -104,6 +106,10 @@ export default function AppRoutes() {
           path="/dashboard/scan"
           element={<ProtectedRoute allowedRole="organizer"><QRScannerPage /></ProtectedRoute>}
         />
+        <Route
+          path="/dashboard/payouts"
+          element={<ProtectedRoute allowedRole="organizer"><PayoutsPage /></ProtectedRoute>}
+        />
       </Route>
 
       <Route
@@ -129,6 +135,7 @@ export default function AppRoutes() {
         <Route path="/admin/organizers" element={<AdminOrganizers />} />
         <Route path="/admin/attendees" element={<AdminAttendees />} />
         <Route path="/admin/payouts" element={<AdminPayouts />} />
+        <Route path="/admin/settings" element={<AdminSettings />} />
       </Route>
 
       <Route path="*" element={<MainLayout />}>
