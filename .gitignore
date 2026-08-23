@@ -8,8 +8,6 @@
 
 # misc
 .DS_Store
-.env
-.env.local
 .env.*.local
 
 # local env files
@@ -19,7 +17,6 @@ yarn-error.log*
 pnpm-debug.log*
 
 # editors
-.vscode/
 .idea/
 *.suo
 *.ntvs*
@@ -47,3 +44,7 @@ pnpm-debug.log*
 
 # Mac
 Icon?
+branch_structure.json
+temp_auto_push.bat
+temp_interactive_push.bat
+config.bat
